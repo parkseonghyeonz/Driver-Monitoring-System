@@ -23,7 +23,8 @@ def get_frame():
 
 # yolo - person detection
 def person_detect(frame):
-    return model_person.predict(frame, classes=[0], conf=0.5, iou=0.5, verbose=False)[0]
+    person_result = model_person.predict(frame, classes=[0], conf=0.5, iou=0.5, verbose=False)[0]
+    return person_result
 
 
 # 사람 bbox 영역 crop
